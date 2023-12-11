@@ -1,0 +1,17 @@
+<%- include('partials/header.ejs') %>
+<%- include('partials/navbar.ejs') %>
+
+<body>
+    <h1>Write down your Idea</h1>
+    <form action="/submit" method="POST">
+        <label for="title-post">Title</label><br>
+        <input name="title-post" type="text" class="title-post" /><br>
+        <label for="text-area">Write your idea</label><br>
+        <textarea name="text-area" class="text-input"></textarea><br>
+        <input type="submit" value="POST" />
+      </form>
+
+      <% locals.status %>
+</body>
+
+<%- include('partials/footer.ejs') %>

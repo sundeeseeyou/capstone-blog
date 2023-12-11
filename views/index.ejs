@@ -1,0 +1,29 @@
+<%- include("partials/header.ejs") %>
+<%- include('partials/navbar.ejs') %>
+
+<body>
+    <h1>A Simple Blog</h1>
+    <h2>
+        Article List
+    </h2>
+    <section class="container">
+        <div class="write btn"><a href="/create-post">Create</a></div>
+        <ol>
+
+            <%if(locals.article1){%>
+                <li>
+                    <%= article1 %>
+                </li>
+            <%} else {%>
+                <li style="visibility: hidden;">
+
+                </li>
+            <%}%>
+           
+        </ol>
+
+    </section>
+</body>
+
+<%- include("partials/footer.ejs") %>
+
