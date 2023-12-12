@@ -23,21 +23,22 @@ app.use(methodOverride('_method'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
-
+//this line of codes connect you to the root / path
 app.get("/", (req, res) => {
     res.render("index.ejs", {
-        activePage: "A cute blog",
+        activePage: "A Simple Blog",
         postList: postList
     });
 });
 
+//this shows the editor of article
 app.get("/create-post", (req, res) => {
     res.render("post.ejs", {
         activePage: "Write your idea ..."
     });
 });
 
-
+//this line send the written post to the array
 app.post("/submit", (req, res) => {
     const title = req.body["title-post"];
     const textArea = req.body["text-area"];
@@ -51,17 +52,43 @@ app.post("/submit", (req, res) => {
     res.redirect("/");
 });
 
+
+//this show single page article
 app.get("/article/:id", (req, res) => {
     const articleId = parseInt(req.params.id);
     const article = postList[articleId];
-
     res.render("article.ejs", {
-        article,
-        articleId
+        article:article,
+        articleId : articleId
      });
 });
 
+//retrieve article data when you want to edit them
 
+app.get("/edit/article/:id", (req, res) => {
+    const postId = parseInt(req.params.id);
+    const editPost = postList[postId];
+    const editTitle = editPost.title;
+    const editText = editPost.text;
+
+    res.render("edit.ejs", { postId, editTitle, editText });
+});
+
+//this will be use when you update your blog article
+app.put("/article/:id", (req, res) => {
+    const id = parseInt(req.params.id);
+    const updatedTitle = req.body["title-post"];
+    const updatedContent = req.body["text-area"];
+
+    // Update the post in the postList
+    postList[id].title = updatedTitle;
+    postList[id].text = updatedContent;
+
+    // Redirect to the updated post or the home page
+    res.redirect("/article/" + id);
+});
+
+//this code delete an array of your articles
 app.delete('/article/:id', (req, res) => {
     const postId = parseInt(req.params.id);
     postList.splice(postId,1);

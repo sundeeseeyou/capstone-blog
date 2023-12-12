@@ -30,8 +30,6 @@ nav ul > li {
     list-style: none;
     text-decoration: none;
     align-self: center;
-    
-    
 }
 
 nav a{
@@ -123,6 +121,10 @@ form.blog input[type="submit"]{
     font-weight: bold;
 }
 
+section.container li{
+    line-height: 2rem;
+}
+
 
 section.container a{
     font-size: 1.2rem;
@@ -136,23 +138,32 @@ section.container a{
     cursor: pointer;
 }
 
-form[method="POST"]{
+div.button-list{
     display: flex;
     flex-direction: row;
     gap: 1rem;
     justify-content: end;
+    margin-top: 2rem;
 }
 
-.red-btn{
+.btn{
     color: white;
-    width:5rem;
-    background-color: #ff1751;
     border: none;
-    padding: 0.5rem 1rem;
-    position: relative;
-    top: 2rem;
+    font-size: 1.2rem;
     text-align: center;
 
+}
+
+.red {
+    background-color: #ff1751;
+    width: 7rem;
+    padding: 0.5rem 2rem;
+}
+
+.black {
+    background-color: #3d3d3d;
+    width: 7rem;
+    padding: 0.5rem .9rem;
 }
 
 

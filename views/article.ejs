@@ -10,12 +10,15 @@
         <p>No article found</p>
     <% } %>
 
-
+    <div class="button-list">
+        <form action="/edit/article/<%=articleId%>" method="GET">
+            <button type="submit" class="black btn hover-style" onclick="return confirm('Are you sure want to edit?')">Edit</button>
+        </form>
     <!-- Form for deleting the post -->
-    <form action="/article/<%= article %>?_method=DELETE" method="POST" >
-        <button type="submit" class="red-btn hover-style" onclick="return confirm('Are you sure you want to delete this post?')">Delete</button>
+    <form action="/article/<%= article %>?_method=DELETE" method="POST">
+        <button type="submit" class="red btn hover-style" onclick="return confirm('Are you sure you want to delete this post?')">Delete</button>
     </form>
-
+</div>
 </section>
 
 
