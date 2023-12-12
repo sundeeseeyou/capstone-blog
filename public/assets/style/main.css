@@ -1,0 +1,158 @@
+* {
+    margin:0;
+}
+
+body{
+    background-color: #f4f4f4;
+    font-size: 1.2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #3d3d3d;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    background-color: #3d3d3d;
+}
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: end;
+    width: 100vw;
+    padding: 1rem 2rem;
+}
+
+nav ul > li {
+    /* padding: 1rem 2rem; */
+    list-style: none;
+    text-decoration: none;
+    align-self: center;
+    
+    
+}
+
+nav a{
+    text-decoration: none;
+    color:#f4f4f4;
+}
+
+nav a:hover{
+    color: #d4d4d4;
+}
+
+nav h1{
+    width:20vw;
+    color: #f4f4f4;
+    align-self: center;
+    padding-left: 1rem;
+}
+
+h2{
+    text-align: center;
+    margin: 2rem;
+}
+
+section.container {
+    padding: 2rem 6rem;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    background-color: #3d3d3d;
+    color: #f4f4f4;
+    text-align: center;
+    padding: 1rem 0;
+    position: absolute;
+    bottom:0;
+    width: 100vw;
+    
+}
+
+.write-btn{
+    background-color: #3d3d3d;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 100vw;
+    position: absolute;
+    bottom: 5rem;
+    right: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.write-btn:hover{
+    opacity: 70%;
+    cursor: pointer;
+}
+
+.center{
+    justify-content: center;
+    align-items: center;
+}
+
+form.blog{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+form.blog .title-post{
+    width: 50%;
+    padding: 10px;
+}
+
+form.blog textarea{
+    width: auto;
+    height: 30vh;
+    padding: 10px;
+}
+
+form.blog input[type="submit"]{
+    background-color: #3d3d3d;
+    padding: 1rem 2rem;
+    width: 10%;
+    align-self: end;
+    color: white;
+    font-weight: bold;
+}
+
+
+section.container a{
+    font-size: 1.2rem;
+    color: #3d3d3d;
+    text-decoration: none;
+
+}
+
+.hover-style:hover{
+    opacity: 70%;
+    cursor: pointer;
+}
+
+form[method="POST"]{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: end;
+}
+
+.red-btn{
+    color: white;
+    width:5rem;
+    background-color: #ff1751;
+    border: none;
+    padding: 0.5rem 1rem;
+    position: relative;
+    top: 2rem;
+    text-align: center;
+
+}
+
+

@@ -1,0 +1,24 @@
+<%- include("partials/header.ejs") %>
+
+<body>
+    <%- include('partials/navbar.ejs') %>
+<section class="container">
+    <% if(locals.article) { %>
+        <h2><%= article.title %></h2>
+        <p><%= article.text %></p>
+    <% } else { %>
+        <p>No article found</p>
+    <% } %>
+
+
+    <!-- Form for deleting the post -->
+    <form action="/article/<%= article %>?_method=DELETE" method="POST" >
+        <button type="submit" class="red-btn hover-style" onclick="return confirm('Are you sure you want to delete this post?')">Delete</button>
+    </form>
+
+</section>
+
+
+</body>
+
+<%- include("partials/footer.ejs") %>

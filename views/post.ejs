@@ -2,16 +2,17 @@
 <%- include('partials/navbar.ejs') %>
 
 <body>
-    <h1>Write down your Idea</h1>
-    <form action="/submit" method="POST">
-        <label for="title-post">Title</label><br>
-        <input name="title-post" type="text" class="title-post" /><br>
-        <label for="text-area">Write your idea</label><br>
-        <textarea name="text-area" class="text-input"></textarea><br>
-        <input type="submit" value="POST" />
-      </form>
+    <h2>Write down your Idea</h2>
+    <section class="container">
+    <form class="blog" action="/submit" method="POST">
+        <label for="title-post">Title</label>
+        <input name="title-post" type="text" class="title-post" required/>
 
-      <% locals.status %>
+        <label for="text-area">Blog post</label>
+        <textarea name="text-area" class="text-input" required></textarea>
+        <input class="hover-style" type="submit" value="POST" />
+      </form>
+</section>
 </body>
 
 <%- include('partials/footer.ejs') %>
