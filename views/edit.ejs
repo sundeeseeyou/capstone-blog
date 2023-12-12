@@ -1,0 +1,19 @@
+<%- include('partials/header.ejs') %>
+
+<body>
+    <%- include('partials/navbar.ejs') %>
+    <h2>Edit Your Post</h2>
+    <section class="container">
+        <form class="blog" action="/article/<%= postId %>?_method=PUT" method="POST">
+
+            <label for="title-post"></label>
+            <input name="title-post" type="text" class="title-post" value="<%= editTitle %>" required/>
+
+            <label for="text-area">Blog post</label>
+            <textarea name="text-area" class="text-input" required><%= editText %></textarea>
+            <input class="hover-style" type="submit" value="UPDATE" />
+        </form>
+    </section>
+</body>
+
+<%- include('partials/footer.ejs') %>
