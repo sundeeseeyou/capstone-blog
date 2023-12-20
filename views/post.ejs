@@ -3,7 +3,7 @@
 
 <body>
   <%- include('partials/navbar.ejs') %>
-    <h2>Write down your Idea</h2>
+    <h2>Post Editor</h2>
     <section class="container">
     <form class="blog" action="/submit" method="POST">
         <label for="title-post">Title</label>
@@ -11,7 +11,7 @@
 
         <label for="text-area">Blog post</label>
         <textarea name="text-area" class="text-input" required></textarea>
-        <input class="hover-style" type="submit" value="POST" />
+        <input class="hover-style" type="submit" value="POST" onclick="return confirm('Are you sure want to post?')" />
       </form>
 </section>
 </body>
