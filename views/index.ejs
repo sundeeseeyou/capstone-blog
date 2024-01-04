@@ -8,11 +8,11 @@
     <h2>Article List</h2>
     <section class="container">
         <a href="/create-post" title="Create post"><div class="write-btn">✏️</div></a>
-        <ol>
-            <% postList.forEach((article, index) => { %>
-                <li>
+
+            <% postList.slice().reverse().forEach((article, index) => { %>
+    
                     <p><a href="/article/<%= index %>" class="hover-style"><%= article.title %></a></p>
-                </li>
+ 
             <% }); %>
         </ol>
     </section>

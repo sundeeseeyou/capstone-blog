@@ -1,7 +1,7 @@
 {
   "name": "capstone-blog",
   "version": "1.0.0",
-  "description": "",
+  "description": "simpleblog\r This simple multi pages blog without database.is build using Express JS, and it's modules such as EJS, method-override and body-parser.",
   "main": "index.js",
   "type": "module",
   "scripts": {

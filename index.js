@@ -25,10 +25,12 @@ app.use(express.static("public"));
 
 //this line of codes connect you to the root / path
 app.get("/", (req, res) => {
+    postList.sort((b, a) => a.time - b.time);
     res.render("index.ejs", {
         activePage: "A Simple Blog",
         postList: postList
     });
+    
 });
 
 //this shows the editor of article
